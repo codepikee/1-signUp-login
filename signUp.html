@@ -9,49 +9,81 @@ address
 userName
 password
 company
-comments
+aboutYou
 -->
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <h2>HTML Forms</h2>
+<div class="container">
+  <div class="form-group">
+    <label for="fname">First name:</label>
+    <input type="text" class="form-control" id="fname" placeholder="firstname" value="John">
+  </div>
+  <div class="form-group">
+    <label for="lname">Last name:</label>
+    <input type="text" class="form-control" id="lname" placeholder="lastname" value="Doe">
+  </div>
+  <div class="form-group">
+    <label for="phoneNumber">phone number:</label>
+    <input type="number" class="form-control" id="phoneNumber" placeholder="phoneNumber" pattern="^[0-9]{10}$">
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" class="radio" name="gender" id="male" value="male" >
+      male
+    </label>
+    <label>
+      <input type="radio" class="radio" name="gender"id="female" value="female">
+      female
+    </label>
+    <label>
+      <input type="radio" class="radio" name="gender" id="other" value="other">
+      Other
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="birthday">Birthday:</label>
+    <input type="date" class="form-control" id="birthday" name="birthday">
+  </div>
+    <div class="form-group">
+    <label for="address">address</label>
+    <input type="text" class="form-control" id="address" name="address">
+  </div>
+  <div class="form-group">
+    <label for="company">company</label>
+    <input type="text" class="form-control" id="company" name="company">
+  </div>
+  <div class="form-group">
+    <label for="userName">userName</label>
+    <input type="text" class="form-control"  id="userName" name="userName" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+  </div>
+  <div class="form-group">  
+    <label for="password">password</label>
+    <input type="password" class="form-control" id="password" name="password">
+  </div>
+  <div class="form-group">
+    <label for="aboutYou">About You</label>
+    <textarea id="aboutYou" class="form-control" name="aboutYou" rows="4" cols="50"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="Photo">Photo</label>
+    <input type="file" id="photoUpload" class="form-control" >
+  </div>
+  <input type="submit" class="btn btn-default" value="Submit">
 
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <label for="phoneNumber">phone number:</label><br>
-  <input type="number" id="phoneNumber" name="phoneNumber"><br>
-  <label for="gender">gender</label><br>
-  <input type="radio" id="male" name="gender" value="male">
-  <label for="male">Male</label><br>
-  <input type="radio" id="female" name="gender" value="female">
-  <label for="female">Female</label><br>
-  <input type="radio" id="other" name="gender" value="other">
-  <label for="other">Other</label><br> 
-  <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday"><br>
-  <label for="address">address</label><br>
-  <input type="text" id="address" name="address"><br>
-  <label for="company">company</label><br>
-  <input type="text" id="company" name="company"><br>
-  <label for="userName">userName</label><br>
-  <input type="text" id="userName" name="userName"><br>
-  <label for="password">password</label><br>
-  <input type="password" id="password" name="password"><br>
-  <label for="comments">comments</label><br>
-  <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
-  <input type="submit" value="Submit">
 
+</form>
 
-</form> 
-
+</div>
 <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 
 </body>
